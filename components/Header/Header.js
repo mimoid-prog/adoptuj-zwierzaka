@@ -1,17 +1,20 @@
-import React, { useRef, useEffect } from "react";
-import Dog from "react-svg-loader!../../public/doggie.svg";
+import React, { useRef } from "react";
+import Dog from "svg-react-loader?name=Dog!../../public/doggie.svg";
 import Navbar from "../Navbar/Navbar";
-import gsap from "gsap";
 
 const Header = () => {
   const wrapper = useRef(null);
 
-  useEffect(() => {
+  const changeCollarColor = () => {
     const [elements] = wrapper.current.children;
-    console.log("elements: ", elements);
-    const tail = elements.getElementById("tail");
-    console.log(tail);
-  }, []);
+    const collar = elements.getElementById("collar");
+    const rand = [
+      Math.floor(Math.random() * (255 - 0)) + 0,
+      Math.floor(Math.random() * (255 - 0)) + 0,
+      Math.floor(Math.random() * (255 - 0)) + 0
+    ];
+    collar.style.stroke = `rgb(${rand[0]}, ${rand[1]}, ${rand[2]})`;
+  };
 
   return (
     <div className="header">
@@ -21,7 +24,7 @@ const Header = () => {
           <div className="header-inner">
             <div className="visual">
               <div className="svg-wrapper" ref={wrapper}>
-                <Dog className="svg" />
+                <Dog className="dog-svg" onClick={changeCollarColor} />
               </div>
             </div>
             <div className="content">
@@ -181,18 +184,72 @@ const Header = () => {
             }
 
             h1 {
-              font-size: 4.2rem;
+              font-size: 4.4rem;
             }
           }
 
           @media (min-width: 1400px) {
             .content-desktop-bg {
               background-size: 55%;
-              background-position: 8% 35%;
+              background-position: 12% 35%;
             }
           }
         `}
       </style>
+
+      <style global jsx>{`
+        .dog-svg:hover {
+          cursor: pointer;
+        }
+
+        #tail {
+          animation: tail 1.4s infinite alternate;
+          transform-origin: left bottom;
+          transform-box: fill-box;
+        }
+
+        @keyframes tail {
+          0% {
+            transform: rotateZ(-6deg);
+          }
+          20% {
+            transform: rotateZ(0deg);
+          }
+          100% {
+            transform: rotateZ(0deg);
+          }
+        }
+
+        .dog-svg #ear {
+          animation: ear 2s;
+          animation-iteration-count: infinite;
+          transform-origin: top;
+          transform-box: fill-box;
+          animation-play-state: paused;
+        }
+
+        .dog-svg:hover #ear {
+          animation-play-state: running;
+        }
+
+        @keyframes ear {
+          0% {
+            transform: rotateZ(0deg);
+          }
+          30% {
+            transform: rotateZ(5deg);
+          }
+          60% {
+            transform: rotateZ(0deg);
+          }
+          90% {
+            transform: rotateZ(3deg);
+          }
+          100% {
+            transform: rotateZ(0deg);
+          }
+        }
+      `}</style>
     </div>
   );
 };

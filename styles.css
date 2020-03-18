@@ -22,6 +22,12 @@ body {
   margin: 0 auto;
 }
 
+@media (min-width: 1280px) {
+  .container {
+    max-width: 80%;
+  }
+}
+
 /*BUTTONS AND LINKS----*/
 .a {
   text-decoration: none;
