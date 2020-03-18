@@ -102,6 +102,12 @@ const Hamburger = props => {
             transform: translate3d(0, -10px, 0) rotate(-45deg);
             background: #fff;
           }
+
+          @media (min-width: 1024px) {
+            .hamburger {
+              display: none;
+            }
+          }
         `}
       </style>
     </>

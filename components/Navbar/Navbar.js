@@ -11,18 +11,18 @@ const Navbar = () => {
       <nav className={`nav ${isActive && "is-active"}`}>
         <ul>
           <li>
+            <Link href="/kontakt">
+              <a>Kontakt</a>
+            </Link>
+          </li>
+          <li>
             <Link href="/logowanie">
               <a>Logowanie</a>
             </Link>
           </li>
           <li>
             <Link href="/rejestracja">
-              <a>Rejestracja</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/kontakt">
-              <a>Kontakt</a>
+              <a className="signup-btn">Rejestracja</a>
             </Link>
           </li>
         </ul>
@@ -64,6 +64,57 @@ const Navbar = () => {
 
           a {
             color: #fff;
+          }
+
+          a:hover {
+            color: #f5f5f5;
+          }
+
+          @media (min-width: 1024px) {
+            .nav {
+              background: transparent;
+              position: relative;
+              transform: translateY(0px);
+            }
+
+            ul {
+              display: flex;
+              justify-content: flex-end;
+              align-items: center;
+            }
+
+            li {
+              margin-top: 0;
+              margin-left: 24px;
+            }
+
+            li:last-child {
+              margin-left: 16px;
+            }
+
+            a {
+              text-decoration: none;
+            }
+
+            .signup-btn {
+              background: var(--main-color);
+              color: white;
+              transition: background 0.2s ease;
+              border-radius: 99px;
+              padding: 6px 18px;
+              border: none;
+              display: inline-block;
+            }
+
+            .signup-btn:hover {
+              background: #e3396b;
+            }
+          }
+
+          @media (min-width: 1280px) {
+            li {
+              font-size: 18px;
+            }
           }
         `}
       </style>
