@@ -38,7 +38,7 @@ const LoginForm = () => {
 
   const formik = useFormik({
     initialValues: {
-      login: "",
+      email: "",
       password: ""
     },
     validate,
