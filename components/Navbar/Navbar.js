@@ -2,13 +2,22 @@ import React, { useState } from "react";
 import Hamburger from "./Hamburger";
 import Link from "next/link";
 
-const Navbar = () => {
+const Navbar = props => {
   const [isActive, setIsActive] = useState(false);
 
   return (
-    <div className="navbar">
-      <Hamburger isActive={isActive} setIsActive={setIsActive} />
-      <nav className={`nav ${isActive && "is-active"}`}>
+    <div className={`navbar ${props.notHome ? "not-home" : ""}`}>
+      <Link href="/">
+        <a className="title">
+          <h2>
+            adoptuj<span>zwierzaka</span>.pl
+          </h2>
+        </a>
+      </Link>
+      <div className="hamburger-box">
+        <Hamburger isActive={isActive} setIsActive={setIsActive} />
+      </div>
+      <nav className={`nav ${isActive ? "is-active" : ""}`}>
         <ul>
           <li>
             <Link href="/kontakt">
@@ -32,8 +41,9 @@ const Navbar = () => {
         {`
           .navbar {
             display: flex;
-            justify-content: flex-end;
-            height: 60px;
+            align-items: center;
+            justify-content: space-between;
+            padding: 25px 0;
           }
 
           .nav {
@@ -59,7 +69,11 @@ const Navbar = () => {
           }
 
           li {
-            margin-top: 14px;
+            margin-bottom: 14px;
+          }
+
+          li:last-child {
+            margin-bottom: 0;
           }
 
           a {
@@ -70,11 +84,52 @@ const Navbar = () => {
             color: #f5f5f5;
           }
 
+          .hamburger-box {
+            position: relative;
+            height: 32px;
+            width: 40px;
+          }
+
+          .title {
+            visibility: hidden;
+          }
+
+          .title h2 {
+            font-size: 1.2rem;
+            color: var(--font-color);
+          }
+
+          .title h2 {
+            font-size: 1.2rem;
+            color: var(--font-color);
+          }
+
+          .not-home .title {
+            visibility: visible;
+          }
+
+          .not-home .title {
+            text-decoration: none;
+          }
+
+          .not-home .title h2 span {
+            color: var(--main-color);
+          }
+
+          .not-home .nav {
+            background: #000;
+          }
+
           @media (min-width: 1024px) {
+            .navbar {
+              height: auto;
+            }
+
             .nav {
               background: transparent;
               position: relative;
               transform: translateY(0px);
+              padding: 0;
             }
 
             ul {
@@ -84,7 +139,7 @@ const Navbar = () => {
             }
 
             li {
-              margin-top: 0;
+              margin-bottom: 0;
               margin-left: 24px;
             }
 
@@ -108,6 +163,18 @@ const Navbar = () => {
 
             .signup-btn:hover {
               background: #e3396b;
+            }
+
+            .title h2 {
+              font-size: 1.5rem;
+            }
+
+            .not-home a {
+              color: var(--font-color);
+            }
+
+            .not-home .signup-btn {
+              color: #fff;
             }
           }
 

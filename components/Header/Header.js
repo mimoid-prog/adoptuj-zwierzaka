@@ -63,7 +63,7 @@ const Header = () => {
               rgba(109, 190, 69, 1) 81%,
               rgba(7, 153, 72, 1) 100%
             );
-            padding: 20px 0 10px;
+            padding-bottom: 10px;
           }
 
           .content {

@@ -16,7 +16,6 @@ const Hamburger = props => {
       <style jsx>
         {`
           .hamburger {
-            padding: 15px 15px;
             display: inline-block;
             cursor: pointer;
             transition-property: opacity, filter;
@@ -32,6 +31,8 @@ const Hamburger = props => {
 
             position: absolute;
             z-index: 99;
+            top: 50%;
+            transform: translateY(-50%);
           }
 
           .hamburger.is-active .hamburger-inner,
