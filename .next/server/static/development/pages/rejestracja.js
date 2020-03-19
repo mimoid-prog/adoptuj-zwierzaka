@@ -392,7 +392,8 @@ module.exports = {
 	"error": "form_error__2_a4H",
 	"passwordBox": "form_passwordBox__bZcW3",
 	"showPassword": "form_showPassword__1PNlw",
-	"info": "form_info__1rD_6"
+	"info": "form_info__1rD_6",
+	"forgotPasswordBtn": "form_forgotPasswordBtn__1qa2C"
 };
 
 /***/ }),
