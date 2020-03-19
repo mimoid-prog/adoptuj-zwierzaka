@@ -176,6 +176,10 @@ const Navbar = props => {
             .not-home .signup-btn {
               color: #fff;
             }
+
+            .not-home .nav {
+              background: transparent;
+            }
           }
 
           @media (min-width: 1280px) {
