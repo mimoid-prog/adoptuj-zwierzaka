@@ -46,12 +46,23 @@ const validate = values => {
 };
 
 const SignupForm = () => {
-  const [passwordType, setPasswordType] = useState("password");
+  const [passwordOptions, setPasswordOptions] = useState({
+    type: "password",
+    text: "Pokaż"
+  });
 
-  const handlePasswordTypeChange = e => {
+  const handlePasswordOptionsChange = e => {
     e.preventDefault();
-    if (passwordType === "text") setPasswordType("password");
-    else setPasswordType("text");
+    if (passwordOptions.type === "text")
+      setPasswordOptions({
+        type: "password",
+        text: "Pokaż"
+      });
+    else
+      setPasswordOptions({
+        type: "text",
+        text: "Ukryj"
+      });
   };
 
   const formik = useFormik({
@@ -141,7 +152,7 @@ const SignupForm = () => {
         <input
           id="password"
           name="password"
-          type={passwordType}
+          type={passwordOptions.type}
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           value={formik.values.password}
@@ -149,9 +160,9 @@ const SignupForm = () => {
         />
         <button
           className={styles.showPassword}
-          onClick={handlePasswordTypeChange}
+          onClick={handlePasswordOptionsChange}
         >
-          Pokaż
+          {passwordOptions.text}
         </button>
       </div>
 

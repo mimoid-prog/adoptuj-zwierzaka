@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -160,13 +160,22 @@ const validate = values => {
 
 const SignupForm = () => {
   const {
-    0: passwordType,
-    1: setPasswordType
-  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])("password");
+    0: passwordOptions,
+    1: setPasswordOptions
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({
+    type: "password",
+    text: "Pokaż"
+  });
 
-  const handlePasswordTypeChange = e => {
+  const handlePasswordOptionsChange = e => {
     e.preventDefault();
-    if (passwordType === "text") setPasswordType("password");else setPasswordType("text");
+    if (passwordOptions.type === "text") setPasswordOptions({
+      type: "password",
+      text: "Pokaż"
+    });else setPasswordOptions({
+      type: "text",
+      text: "Ukryj"
+    });
   };
 
   const formik = Object(formik__WEBPACK_IMPORTED_MODULE_1__["useFormik"])({
@@ -187,7 +196,7 @@ const SignupForm = () => {
     className: _form_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.form,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 83
     },
     __self: undefined
   }, __jsx("label", {
@@ -195,7 +204,7 @@ const SignupForm = () => {
     className: _form_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.label,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 84
     },
     __self: undefined
   }, "Imi\u0119"), __jsx("input", {
@@ -208,14 +217,14 @@ const SignupForm = () => {
     className: _form_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.textInput,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76
+      lineNumber: 87
     },
     __self: undefined
   }), formik.touched.firstName && formik.errors.firstName ? __jsx("p", {
     className: _form_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.error,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 86
+      lineNumber: 97
     },
     __self: undefined
   }, formik.errors.firstName) : null, __jsx("label", {
@@ -223,7 +232,7 @@ const SignupForm = () => {
     className: _form_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.label,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 89
+      lineNumber: 100
     },
     __self: undefined
   }, "Nazwisko"), __jsx("input", {
@@ -236,14 +245,14 @@ const SignupForm = () => {
     className: _form_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.textInput,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 92
+      lineNumber: 103
     },
     __self: undefined
   }), formik.touched.lastName && formik.errors.lastName ? __jsx("p", {
     className: _form_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.error,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 102
+      lineNumber: 113
     },
     __self: undefined
   }, formik.errors.lastName) : null, __jsx("label", {
@@ -251,7 +260,7 @@ const SignupForm = () => {
     className: _form_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.label,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 105
+      lineNumber: 116
     },
     __self: undefined
   }, "Adres e-mail"), __jsx("input", {
@@ -264,14 +273,14 @@ const SignupForm = () => {
     className: _form_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.textInput,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 108
+      lineNumber: 119
     },
     __self: undefined
   }), formik.touched.email && formik.errors.email ? __jsx("p", {
     className: _form_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.error,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 118
+      lineNumber: 129
     },
     __self: undefined
   }, formik.errors.email) : null, __jsx("label", {
@@ -279,7 +288,7 @@ const SignupForm = () => {
     className: _form_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.label,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 121
+      lineNumber: 132
     },
     __self: undefined
   }, "Telefon"), __jsx("input", {
@@ -292,14 +301,14 @@ const SignupForm = () => {
     className: _form_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.textInput,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 124
+      lineNumber: 135
     },
     __self: undefined
   }), formik.touched.phone && formik.errors.phone ? __jsx("p", {
     className: _form_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.error,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 134
+      lineNumber: 145
     },
     __self: undefined
   }, formik.errors.phone) : null, __jsx("label", {
@@ -307,42 +316,42 @@ const SignupForm = () => {
     className: _form_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.label,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 137
+      lineNumber: 148
     },
     __self: undefined
   }, "Has\u0142o"), __jsx("div", {
     className: _form_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.passwordBox,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 140
+      lineNumber: 151
     },
     __self: undefined
   }, __jsx("input", {
     id: "password",
     name: "password",
-    type: passwordType,
+    type: passwordOptions.type,
     onChange: formik.handleChange,
     onBlur: formik.handleBlur,
     value: formik.values.password,
     className: _form_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.textInput,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 141
+      lineNumber: 152
     },
     __self: undefined
   }), __jsx("button", {
     className: _form_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.showPassword,
-    onClick: handlePasswordTypeChange,
+    onClick: handlePasswordOptionsChange,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 150
+      lineNumber: 161
     },
     __self: undefined
-  }, "Poka\u017C")), formik.touched.password && formik.errors.password ? __jsx("p", {
+  }, passwordOptions.text)), formik.touched.password && formik.errors.password ? __jsx("p", {
     className: _form_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.error,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 159
+      lineNumber: 170
     },
     __self: undefined
   }, formik.errors.password) : null, __jsx("button", {
@@ -350,14 +359,14 @@ const SignupForm = () => {
     className: `btn main-btn ${_form_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.submitBtn}`,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 162
+      lineNumber: 173
     },
     __self: undefined
   }, "Zarejestruj si\u0119"), __jsx("p", {
     className: _form_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.info,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 165
+      lineNumber: 176
     },
     __self: undefined
   }, "Zak\u0142adaj\u0105c konto, akceptujesz regulamin oraz polityk\u0119 prywatno\u015Bci adoptujzwierzaka.pl."));
@@ -2654,7 +2663,7 @@ const rejestracja = () => {
 
 /***/ }),
 
-/***/ 4:
+/***/ 5:
 /*!************************************!*\
   !*** multi ./pages/rejestracja.js ***!
   \************************************/
