@@ -1,7 +1,7 @@
 {
   "devFiles": [
-    "static/development/dll/dll_88bfe47d29bf84228398.js",
-    "static/development/dll/dll_88bfe47d29bf84228398.js.map"
+    "static/development/dll/dll_4f7c042f06864c814411.js",
+    "static/development/dll/dll_4f7c042f06864c814411.js.map"
   ],
   "lowPriorityFiles": [
     "static/development/_buildManifest.js",
@@ -28,7 +28,7 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/logowanie": [
+    "/rejestracja": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]
