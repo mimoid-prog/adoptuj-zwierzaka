@@ -355,14 +355,14 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 var BasicLayout = function BasicLayout(props) {
   return __jsx("div", {
-    className: "jsx-4194998187" + " " + "basic-layout",
+    className: "jsx-2325083348" + " " + "basic-layout",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 6
     },
     __self: this
   }, __jsx("div", {
-    className: "jsx-4194998187" + " " + "container",
+    className: "jsx-2325083348" + " " + "container",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 7
@@ -376,23 +376,23 @@ var BasicLayout = function BasicLayout(props) {
     },
     __self: this
   })), __jsx("div", {
-    className: "jsx-4194998187" + " " + "content",
+    className: "jsx-2325083348" + " " + "content",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10
     },
     __self: this
   }, __jsx("div", {
-    className: "jsx-4194998187" + " " + "container",
+    className: "jsx-2325083348" + " " + "container",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 11
     },
     __self: this
   }, props.children)), __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
-    id: "4194998187",
+    id: "2325083348",
     __self: this
-  }, ".content.jsx-4194998187{background-color:#e5e5e5;width:100%;padding:2rem 0 4rem;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIk06XFxQcm9qZWt0eU1cXE5leHRcXEFkb3B0dWpad2llcnpha2FcXGNvbXBvbmVudHNcXExheW91dHNcXEJhc2ljTGF5b3V0LmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQWNTLEFBR3NDLHlCQUNkLFdBQ1Msb0JBQ3RCIiwiZmlsZSI6Ik06XFxQcm9qZWt0eU1cXE5leHRcXEFkb3B0dWpad2llcnpha2FcXGNvbXBvbmVudHNcXExheW91dHNcXEJhc2ljTGF5b3V0LmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0IGZyb20gXCJyZWFjdFwiO1xyXG5pbXBvcnQgTmF2YmFyIGZyb20gXCIuLi9OYXZiYXIvTmF2YmFyXCI7XHJcblxyXG5jb25zdCBCYXNpY0xheW91dCA9IHByb3BzID0+IHtcclxuICByZXR1cm4gKFxyXG4gICAgPGRpdiBjbGFzc05hbWU9XCJiYXNpYy1sYXlvdXRcIj5cclxuICAgICAgPGRpdiBjbGFzc05hbWU9XCJjb250YWluZXJcIj5cclxuICAgICAgICA8TmF2YmFyIG5vdEhvbWU9e3RydWV9IC8+XHJcbiAgICAgIDwvZGl2PlxyXG4gICAgICA8ZGl2IGNsYXNzTmFtZT1cImNvbnRlbnRcIj5cclxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImNvbnRhaW5lclwiPntwcm9wcy5jaGlsZHJlbn08L2Rpdj5cclxuICAgICAgPC9kaXY+XHJcblxyXG4gICAgICA8c3R5bGUganN4PlxyXG4gICAgICAgIHtgXHJcbiAgICAgICAgICAuY29udGVudCB7XHJcbiAgICAgICAgICAgIGJhY2tncm91bmQtY29sb3I6ICNlNWU1ZTU7XHJcbiAgICAgICAgICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgICAgICAgICBwYWRkaW5nOiAycmVtIDAgNHJlbTtcclxuICAgICAgICAgIH1cclxuICAgICAgICBgfVxyXG4gICAgICA8L3N0eWxlPlxyXG4gICAgPC9kaXY+XHJcbiAgKTtcclxufTtcclxuXHJcbmV4cG9ydCBkZWZhdWx0IEJhc2ljTGF5b3V0O1xyXG4iXX0= */\n/*@ sourceURL=M:\\\\ProjektyM\\\\Next\\\\AdoptujZwierzaka\\\\components\\\\Layouts\\\\BasicLayout.js */"));
+  }, ".basic-layout.jsx-2325083348{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;width:100%;min-height:100vh;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;}.basic-layout.jsx-2325083348 div.jsx-2325083348{width:100%;}.content.jsx-2325083348{background-color:#ededed;padding:2rem 0 4rem;-webkit-flex:1 0 auto;-ms-flex:1 0 auto;flex:1 0 auto;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIk06XFxQcm9qZWt0eU1cXE5leHRcXEFkb3B0dWpad2llcnpha2FcXGNvbXBvbmVudHNcXExheW91dHNcXEJhc2ljTGF5b3V0LmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQWNTLEFBRzBCLEFBT0YsQUFJYyxXQUgzQixjQUlzQixvQkFDTiw2QkFaSCxXQUNNLGNBWW5CLEdBWHdCLDhFQUN4QiIsImZpbGUiOiJNOlxcUHJvamVrdHlNXFxOZXh0XFxBZG9wdHVqWndpZXJ6YWthXFxjb21wb25lbnRzXFxMYXlvdXRzXFxCYXNpY0xheW91dC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCBmcm9tIFwicmVhY3RcIjtcclxuaW1wb3J0IE5hdmJhciBmcm9tIFwiLi4vTmF2YmFyL05hdmJhclwiO1xyXG5cclxuY29uc3QgQmFzaWNMYXlvdXQgPSBwcm9wcyA9PiB7XHJcbiAgcmV0dXJuIChcclxuICAgIDxkaXYgY2xhc3NOYW1lPVwiYmFzaWMtbGF5b3V0XCI+XHJcbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwiY29udGFpbmVyXCI+XHJcbiAgICAgICAgPE5hdmJhciBub3RIb21lPXt0cnVlfSAvPlxyXG4gICAgICA8L2Rpdj5cclxuICAgICAgPGRpdiBjbGFzc05hbWU9XCJjb250ZW50XCI+XHJcbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJjb250YWluZXJcIj57cHJvcHMuY2hpbGRyZW59PC9kaXY+XHJcbiAgICAgIDwvZGl2PlxyXG5cclxuICAgICAgPHN0eWxlIGpzeD5cclxuICAgICAgICB7YFxyXG4gICAgICAgICAgLmJhc2ljLWxheW91dCB7XHJcbiAgICAgICAgICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICAgICAgICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgICAgICAgICBtaW4taGVpZ2h0OiAxMDB2aDtcclxuICAgICAgICAgICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcclxuICAgICAgICAgIH1cclxuXHJcbiAgICAgICAgICAuYmFzaWMtbGF5b3V0IGRpdiB7XHJcbiAgICAgICAgICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgICAgICAgfVxyXG5cclxuICAgICAgICAgIC5jb250ZW50IHtcclxuICAgICAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogI2VkZWRlZDtcclxuICAgICAgICAgICAgcGFkZGluZzogMnJlbSAwIDRyZW07XHJcbiAgICAgICAgICAgIGZsZXg6IDEgMCBhdXRvO1xyXG4gICAgICAgICAgfVxyXG4gICAgICAgIGB9XHJcbiAgICAgIDwvc3R5bGU+XHJcbiAgICA8L2Rpdj5cclxuICApO1xyXG59O1xyXG5cclxuZXhwb3J0IGRlZmF1bHQgQmFzaWNMYXlvdXQ7XHJcbiJdfQ== */\n/*@ sourceURL=M:\\\\ProjektyM\\\\Next\\\\AdoptujZwierzaka\\\\components\\\\Layouts\\\\BasicLayout.js */"));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (BasicLayout);
@@ -1035,7 +1035,7 @@ module.exports = __webpack_require__(/*! regenerator-runtime */ "./node_modules/
 
 exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(true);
 // Module
-exports.push([module.i, ".form_form__3qumc {\r\n  width: 100%;\r\n  display: flex;\r\n  flex-direction: column;\r\n  margin-top: 10px;\r\n}\r\n\r\n.form_label__3QA9s {\r\n  margin-top: 6px;\r\n  font-weight: 400;\r\n}\r\n\r\n.form_textInput__1xehh {\r\n  padding: 5px 0 5px 5px;\r\n  border-radius: 3px;\r\n  border: 1px solid #7d7d7d;\r\n}\r\n\r\n.form_submitBtn__2Re9O {\r\n  border-radius: 3px !important;\r\n  margin-top: 20px;\r\n  font-size: 16px;\r\n}\r\n\r\n.form_error__2_a4H {\r\n  color: #e33724;\r\n  font-size: 0.9rem;\r\n}\r\n\r\n.form_passwordBox__bZcW3 {\r\n  position: relative;\r\n}\r\n\r\n.form_passwordBox__bZcW3 input {\r\n  width: 100%;\r\n}\r\n\r\n.form_showPassword__1PNlw {\r\n  position: absolute;\r\n  top: 50%;\r\n  transform: translateY(-50%);\r\n  right: 8px;\r\n  border: none;\r\n  cursor: pointer;\r\n  z-index: 100;\r\n  background: white;\r\n  padding: 0 2px;\r\n}\r\n\r\n.form_info__1rD_6 {\r\n  margin-top: 24px;\r\n  font-size: 13px;\r\n}\r\n\r\n@media (min-width: 1024px) {\r\n  .form_form__3qumc {\r\n    width: 450px;\r\n    margin: 0 auto;\r\n  }\r\n\r\n  .form_label__3QA9s {\r\n    margin-top: 10px;\r\n  }\r\n\r\n  .form_textInput__1xehh {\r\n    padding: 8px;\r\n  }\r\n\r\n  .form_error__2_a4H {\r\n    margin-top: 2px;\r\n  }\r\n}\r\n", "",{"version":3,"sources":["form.module.css"],"names":[],"mappings":"AAAA;EACE,WAAW;EACX,aAAa;EACb,sBAAsB;EACtB,gBAAgB;AAClB;;AAEA;EACE,eAAe;EACf,gBAAgB;AAClB;;AAEA;EACE,sBAAsB;EACtB,kBAAkB;EAClB,yBAAyB;AAC3B;;AAEA;EACE,6BAA6B;EAC7B,gBAAgB;EAChB,eAAe;AACjB;;AAEA;EACE,cAAc;EACd,iBAAiB;AACnB;;AAEA;EACE,kBAAkB;AACpB;;AAEA;EACE,WAAW;AACb;;AAEA;EACE,kBAAkB;EAClB,QAAQ;EACR,2BAA2B;EAC3B,UAAU;EACV,YAAY;EACZ,eAAe;EACf,YAAY;EACZ,iBAAiB;EACjB,cAAc;AAChB;;AAEA;EACE,gBAAgB;EAChB,eAAe;AACjB;;AAEA;EACE;IACE,YAAY;IACZ,cAAc;EAChB;;EAEA;IACE,gBAAgB;EAClB;;EAEA;IACE,YAAY;EACd;;EAEA;IACE,eAAe;EACjB;AACF","file":"form.module.css","sourcesContent":[".form {\r\n  width: 100%;\r\n  display: flex;\r\n  flex-direction: column;\r\n  margin-top: 10px;\r\n}\r\n\r\n.label {\r\n  margin-top: 6px;\r\n  font-weight: 400;\r\n}\r\n\r\n.textInput {\r\n  padding: 5px 0 5px 5px;\r\n  border-radius: 3px;\r\n  border: 1px solid #7d7d7d;\r\n}\r\n\r\n.submitBtn {\r\n  border-radius: 3px !important;\r\n  margin-top: 20px;\r\n  font-size: 16px;\r\n}\r\n\r\n.error {\r\n  color: #e33724;\r\n  font-size: 0.9rem;\r\n}\r\n\r\n.passwordBox {\r\n  position: relative;\r\n}\r\n\r\n.passwordBox input {\r\n  width: 100%;\r\n}\r\n\r\n.showPassword {\r\n  position: absolute;\r\n  top: 50%;\r\n  transform: translateY(-50%);\r\n  right: 8px;\r\n  border: none;\r\n  cursor: pointer;\r\n  z-index: 100;\r\n  background: white;\r\n  padding: 0 2px;\r\n}\r\n\r\n.info {\r\n  margin-top: 24px;\r\n  font-size: 13px;\r\n}\r\n\r\n@media (min-width: 1024px) {\r\n  .form {\r\n    width: 450px;\r\n    margin: 0 auto;\r\n  }\r\n\r\n  .label {\r\n    margin-top: 10px;\r\n  }\r\n\r\n  .textInput {\r\n    padding: 8px;\r\n  }\r\n\r\n  .error {\r\n    margin-top: 2px;\r\n  }\r\n}\r\n"]}]);
+exports.push([module.i, ".form_form__3qumc {\r\n  width: 100%;\r\n  display: flex;\r\n  flex-direction: column;\r\n  margin-top: 10px;\r\n}\r\n\r\n.form_label__3QA9s {\r\n  margin-top: 8px;\r\n  font-weight: 500;\r\n}\r\n\r\n.form_textInput__1xehh {\r\n  padding: 5px 0 5px 5px;\r\n  border-radius: 3px;\r\n  border: 1px solid #7d7d7d;\r\n}\r\n\r\n.form_submitBtn__2Re9O {\r\n  border-radius: 3px !important;\r\n  margin-top: 20px;\r\n  font-size: 16px;\r\n}\r\n\r\n.form_error__2_a4H {\r\n  color: #e33724;\r\n  font-size: 0.9rem;\r\n}\r\n\r\n.form_passwordBox__bZcW3 {\r\n  position: relative;\r\n}\r\n\r\n.form_passwordBox__bZcW3 input {\r\n  width: 100%;\r\n}\r\n\r\n.form_showPassword__1PNlw {\r\n  position: absolute;\r\n  top: 50%;\r\n  transform: translateY(-50%);\r\n  right: 8px;\r\n  border: none;\r\n  cursor: pointer;\r\n  z-index: 100;\r\n  background: white;\r\n  padding: 0 2px;\r\n}\r\n\r\n.form_info__1rD_6 {\r\n  margin-top: 24px;\r\n  font-size: 13px;\r\n}\r\n\r\n@media (min-width: 1024px) {\r\n  .form_form__3qumc {\r\n    width: 450px;\r\n    margin: 0 auto;\r\n  }\r\n\r\n  .form_label__3QA9s {\r\n    margin-top: 10px;\r\n  }\r\n\r\n  .form_textInput__1xehh {\r\n    padding: 8px;\r\n  }\r\n\r\n  .form_error__2_a4H {\r\n    margin-top: 2px;\r\n  }\r\n}\r\n", "",{"version":3,"sources":["form.module.css"],"names":[],"mappings":"AAAA;EACE,WAAW;EACX,aAAa;EACb,sBAAsB;EACtB,gBAAgB;AAClB;;AAEA;EACE,eAAe;EACf,gBAAgB;AAClB;;AAEA;EACE,sBAAsB;EACtB,kBAAkB;EAClB,yBAAyB;AAC3B;;AAEA;EACE,6BAA6B;EAC7B,gBAAgB;EAChB,eAAe;AACjB;;AAEA;EACE,cAAc;EACd,iBAAiB;AACnB;;AAEA;EACE,kBAAkB;AACpB;;AAEA;EACE,WAAW;AACb;;AAEA;EACE,kBAAkB;EAClB,QAAQ;EACR,2BAA2B;EAC3B,UAAU;EACV,YAAY;EACZ,eAAe;EACf,YAAY;EACZ,iBAAiB;EACjB,cAAc;AAChB;;AAEA;EACE,gBAAgB;EAChB,eAAe;AACjB;;AAEA;EACE;IACE,YAAY;IACZ,cAAc;EAChB;;EAEA;IACE,gBAAgB;EAClB;;EAEA;IACE,YAAY;EACd;;EAEA;IACE,eAAe;EACjB;AACF","file":"form.module.css","sourcesContent":[".form {\r\n  width: 100%;\r\n  display: flex;\r\n  flex-direction: column;\r\n  margin-top: 10px;\r\n}\r\n\r\n.label {\r\n  margin-top: 8px;\r\n  font-weight: 500;\r\n}\r\n\r\n.textInput {\r\n  padding: 5px 0 5px 5px;\r\n  border-radius: 3px;\r\n  border: 1px solid #7d7d7d;\r\n}\r\n\r\n.submitBtn {\r\n  border-radius: 3px !important;\r\n  margin-top: 20px;\r\n  font-size: 16px;\r\n}\r\n\r\n.error {\r\n  color: #e33724;\r\n  font-size: 0.9rem;\r\n}\r\n\r\n.passwordBox {\r\n  position: relative;\r\n}\r\n\r\n.passwordBox input {\r\n  width: 100%;\r\n}\r\n\r\n.showPassword {\r\n  position: absolute;\r\n  top: 50%;\r\n  transform: translateY(-50%);\r\n  right: 8px;\r\n  border: none;\r\n  cursor: pointer;\r\n  z-index: 100;\r\n  background: white;\r\n  padding: 0 2px;\r\n}\r\n\r\n.info {\r\n  margin-top: 24px;\r\n  font-size: 13px;\r\n}\r\n\r\n@media (min-width: 1024px) {\r\n  .form {\r\n    width: 450px;\r\n    margin: 0 auto;\r\n  }\r\n\r\n  .label {\r\n    margin-top: 10px;\r\n  }\r\n\r\n  .textInput {\r\n    padding: 8px;\r\n  }\r\n\r\n  .error {\r\n    margin-top: 2px;\r\n  }\r\n}\r\n"]}]);
 // Exports
 exports.locals = {
 	"form": "form_form__3qumc",
@@ -14690,7 +14690,7 @@ var rejestracja = function rejestracja() {
 
 /***/ }),
 
-/***/ 3:
+/***/ 2:
 /*!***********************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Frejestracja&absolutePagePath=M%3A%5CProjektyM%5CNext%5CAdoptujZwierzaka%5Cpages%5Crejestracja.js ***!
   \***********************************************************************************************************************************************/
@@ -14713,5 +14713,5 @@ module.exports = dll_3a359c314b014ea1ed53;
 
 /***/ })
 
-},[[3,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=rejestracja.js.map

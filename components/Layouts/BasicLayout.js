@@ -13,10 +13,21 @@ const BasicLayout = props => {
 
       <style jsx>
         {`
-          .content {
-            background-color: #e5e5e5;
+          .basic-layout {
+            display: flex;
             width: 100%;
+            min-height: 100vh;
+            flex-direction: column;
+          }
+
+          .basic-layout div {
+            width: 100%;
+          }
+
+          .content {
+            background-color: #ededed;
             padding: 2rem 0 4rem;
+            flex: 1 0 auto;
           }
         `}
       </style>

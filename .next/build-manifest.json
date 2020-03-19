@@ -28,6 +28,10 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
+    "/logowanie": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
     "/rejestracja": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
