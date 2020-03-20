@@ -58,7 +58,7 @@ var LoginForm = function LoginForm() {
 
   var formik = Object(formik__WEBPACK_IMPORTED_MODULE_1__["useFormik"])({
     initialValues: {
-      login: "",
+      email: "",
       password: ""
     },
     validate: validate,
@@ -14593,7 +14593,7 @@ var logowanie = function logowanie() {
 
 /***/ }),
 
-/***/ 1:
+/***/ 2:
 /*!*******************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Flogowanie&absolutePagePath=M%3A%5CProjektyM%5CNext%5CAdoptujZwierzaka%5Cpages%5Clogowanie.js ***!
   \*******************************************************************************************************************************************/
@@ -14616,5 +14616,5 @@ module.exports = dll_3a359c314b014ea1ed53;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=logowanie.js.map
