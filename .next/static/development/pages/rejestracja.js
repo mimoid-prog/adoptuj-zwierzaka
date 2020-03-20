@@ -14700,7 +14700,7 @@ var rejestracja = function rejestracja() {
 
 /***/ }),
 
-/***/ 4:
+/***/ 2:
 /*!***********************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Frejestracja&absolutePagePath=M%3A%5CProjektyM%5CNext%5CAdoptujZwierzaka%5Cpages%5Crejestracja.js ***!
   \***********************************************************************************************************************************************/
@@ -14723,5 +14723,5 @@ module.exports = dll_3a359c314b014ea1ed53;
 
 /***/ })
 
-},[[4,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=rejestracja.js.map

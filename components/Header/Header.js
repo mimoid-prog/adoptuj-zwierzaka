@@ -212,7 +212,13 @@ const Header = () => {
           0% {
             transform: rotateZ(-6deg);
           }
-          20% {
+          10% {
+            transform: rotateZ(0deg);
+          }
+          25% {
+            transform: rotateZ(-6deg);
+          }
+          35% {
             transform: rotateZ(0deg);
           }
           100% {
@@ -221,7 +227,7 @@ const Header = () => {
         }
 
         .dog-svg #ear {
-          animation: ear 2s;
+          animation: ear 1s;
           animation-iteration-count: infinite;
           transform-origin: top;
           transform-box: fill-box;
