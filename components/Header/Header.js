@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import Dog from "svg-react-loader?name=Dog!../../public/doggie.svg";
+import Dog from "../../public/doggie.svg";
 import Navbar from "../Navbar/Navbar";
 
 const Header = () => {

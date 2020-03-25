@@ -1,183 +1,58 @@
 import React, { useState } from "react";
-import { useFormik } from "formik";
+import { Formik, Form } from "formik";
+import TextInput from "./TextInput";
+import PasswordInput from "./PasswordInput";
 import styles from "./form.module.css";
-
-const validate = values => {
-  const errors = {};
-  if (!values.firstName) {
-    errors.firstName = "Pole nie może być puste";
-  } else if (values.firstName.length > 15) {
-    errors.firstName = "Maksymalna liczba znaków to 15";
-  } else if (values.firstName.length < 3) {
-    errors.firstName = "Minimalna liczba znaków to 3";
-  }
-
-  if (!values.lastName) {
-    errors.lastName = "Pole nie może być puste";
-  } else if (values.lastName.length > 20) {
-    errors.lastName = "Maksymalna liczba znaków to 20";
-  } else if (values.lastName.length < 3) {
-    errors.lastName = "Minimalna liczba znaków to 3";
-  }
-
-  if (!values.email) {
-    errors.email = "Pole nie może być puste";
-  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-    errors.email = "Nieprawidłowy adres e-mail";
-  }
-
-  if (!values.phone) {
-    errors.phone = "Pole nie może być puste";
-  } else if (values.phone.length > 12) {
-    errors.phone = "Maksymalna liczba znaków to 12";
-  } else if (values.phone.length < 9) {
-    errors.phone = "Minimalna liczba znaków to 9";
-  }
-
-  if (!values.password) {
-    errors.password = "Pole nie może być puste";
-  } else if (values.password.length > 30) {
-    errors.password = "Maksymalna liczba znaków to 30";
-  } else if (values.password.length < 6) {
-    errors.password = "Minimalna liczba znaków to 6";
-  }
-
-  return errors;
-};
+import * as Yup from "yup";
 
 const SignupForm = () => {
-  const [passwordOptions, setPasswordOptions] = useState({
-    type: "password",
-    text: "Pokaż"
-  });
-
-  const handlePasswordOptionsChange = e => {
-    e.preventDefault();
-    if (passwordOptions.type === "text")
-      setPasswordOptions({
-        type: "password",
-        text: "Pokaż"
-      });
-    else
-      setPasswordOptions({
-        type: "text",
-        text: "Ukryj"
-      });
-  };
-
-  const formik = useFormik({
-    initialValues: {
-      firstName: "",
-      lastName: "",
-      email: "",
-      phone: "",
-      password: ""
-    },
-    validate,
-    onSubmit: values => {
-      alert(JSON.stringify(values, null, 2));
-    }
-  });
-
   return (
-    <form onSubmit={formik.handleSubmit} className={styles.form}>
-      <label htmlFor="firstName" className={styles.label}>
-        Imię
-      </label>
-      <input
-        id="firstName"
-        name="firstName"
-        type="text"
-        onChange={formik.handleChange}
-        onBlur={formik.handleBlur}
-        value={formik.values.firstName}
-        className={styles.textInput}
-      />
-      {formik.touched.firstName && formik.errors.firstName ? (
-        <p className={styles.error}>{formik.errors.firstName}</p>
-      ) : null}
+    <Formik
+      initialValues={{
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        password: ""
+      }}
+      validationSchema={Yup.object({
+        firstName: Yup.string()
+          .max(15, "Maksymalna liczba znaków to 15")
+          .required("Pole nie może być puste"),
+        lastName: Yup.string()
+          .max(30, "Maksymalna liczba znaków to 30")
+          .required("Pole nie może być puste"),
+        email: Yup.string()
+          .email("Nieprawidłowy adres e-mail")
+          .required("Pole nie może być puste"),
+        phone: Yup.string()
+          .max(12, "Maksymalna liczba znaków to 12")
+          .required("Pole nie może być puste"),
+        password: Yup.string()
+          .max(30, "Maksymalna liczba znaków to 30")
+          .required("Pole nie może być puste")
+      })}
+      onSubmit={async (values, { setSubmitting }) => {
+        console.log("Submitted");
+        setSubmitting(false);
+      }}
+    >
+      <Form className={styles.form}>
+        <TextInput label="Imię" name="firstName" type="text" />
+        <TextInput label="Nazwisko" name="lastName" type="text" />
+        <TextInput label="Adres e-mail" name="email" type="email" />
+        <TextInput label="Telefon" name="phone" type="text" />
+        <PasswordInput label="Hasło" name="password" />
 
-      <label htmlFor="lastName" className={styles.label}>
-        Nazwisko
-      </label>
-      <input
-        id="lastName"
-        name="lastName"
-        type="text"
-        onChange={formik.handleChange}
-        onBlur={formik.handleBlur}
-        value={formik.values.lastName}
-        className={styles.textInput}
-      />
-      {formik.touched.lastName && formik.errors.lastName ? (
-        <p className={styles.error}>{formik.errors.lastName}</p>
-      ) : null}
-
-      <label htmlFor="email" className={styles.label}>
-        Adres e-mail
-      </label>
-      <input
-        id="email"
-        name="email"
-        type="email"
-        onChange={formik.handleChange}
-        onBlur={formik.handleBlur}
-        value={formik.values.email}
-        className={styles.textInput}
-      />
-      {formik.touched.email && formik.errors.email ? (
-        <p className={styles.error}>{formik.errors.email}</p>
-      ) : null}
-
-      <label htmlFor="phone" className={styles.label}>
-        Telefon
-      </label>
-      <input
-        id="phone"
-        name="phone"
-        type="text"
-        onChange={formik.handleChange}
-        onBlur={formik.handleBlur}
-        value={formik.values.phone}
-        className={styles.textInput}
-      />
-      {formik.touched.phone && formik.errors.phone ? (
-        <p className={styles.error}>{formik.errors.phone}</p>
-      ) : null}
-
-      <label htmlFor="password" className={styles.label}>
-        Hasło
-      </label>
-      <div className={styles.passwordBox}>
-        <input
-          id="password"
-          name="password"
-          type={passwordOptions.type}
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          value={formik.values.password}
-          className={styles.textInput}
-        />
-        <button
-          className={styles.showPassword}
-          onClick={handlePasswordOptionsChange}
-        >
-          {passwordOptions.text}
+        <button type="submit" className={`btn main-btn ${styles.submitBtn}`}>
+          Zarejestruj się
         </button>
-      </div>
-
-      {formik.touched.password && formik.errors.password ? (
-        <p className={styles.error}>{formik.errors.password}</p>
-      ) : null}
-
-      <button type="submit" className={`btn main-btn ${styles.submitBtn}`}>
-        Zarejestruj się
-      </button>
-      <p className={styles.info}>
-        Zakładając konto, akceptujesz regulamin oraz politykę prywatności
-        adoptujzwierzaka.pl.
-      </p>
-    </form>
+        <p className={styles.info}>
+          Zakładając konto, akceptujesz regulamin oraz politykę prywatności
+          adoptujzwierzaka.pl.
+        </p>
+      </Form>
+    </Formik>
   );
 };
 

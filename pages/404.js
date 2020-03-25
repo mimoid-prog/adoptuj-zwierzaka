@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "../components/Layouts/BasicLayout";
-import Girl from "svg-react-loader?name=Girl!../public/404-colored.svg";
+import Girl from "../public/404-colored.svg";
 
 const Custom404 = () => {
   return (

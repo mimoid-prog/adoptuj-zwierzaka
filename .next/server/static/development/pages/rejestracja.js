@@ -88,15 +88,15 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./components/Forms/SignupForm.js":
-/*!****************************************!*\
-  !*** ./components/Forms/SignupForm.js ***!
-  \****************************************/
+/***/ "./components/Forms/PasswordInput.js":
+/*!*******************************************!*\
+  !*** ./components/Forms/PasswordInput.js ***!
+  \*******************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -108,57 +108,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var formik__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(formik__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _form_module_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./form.module.css */ "./components/Forms/form.module.css");
 /* harmony import */ var _form_module_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_form_module_css__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "M:\\ProjektyM\\Next\\AdoptujZwierzaka\\components\\Forms\\SignupForm.js";
+var _jsxFileName = "M:\\ProjektyM\\Next\\AdoptujZwierzaka\\components\\Forms\\PasswordInput.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 
 
-const validate = values => {
-  const errors = {};
 
-  if (!values.firstName) {
-    errors.firstName = "Pole nie może być puste";
-  } else if (values.firstName.length > 15) {
-    errors.firstName = "Maksymalna liczba znaków to 15";
-  } else if (values.firstName.length < 3) {
-    errors.firstName = "Minimalna liczba znaków to 3";
-  }
 
-  if (!values.lastName) {
-    errors.lastName = "Pole nie może być puste";
-  } else if (values.lastName.length > 20) {
-    errors.lastName = "Maksymalna liczba znaków to 20";
-  } else if (values.lastName.length < 3) {
-    errors.lastName = "Minimalna liczba znaków to 3";
-  }
+const TextInput = (_ref) => {
+  let {
+    label
+  } = _ref,
+      props = _objectWithoutProperties(_ref, ["label"]);
 
-  if (!values.email) {
-    errors.email = "Pole nie może być puste";
-  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-    errors.email = "Nieprawidłowy adres e-mail";
-  }
-
-  if (!values.phone) {
-    errors.phone = "Pole nie może być puste";
-  } else if (values.phone.length > 12) {
-    errors.phone = "Maksymalna liczba znaków to 12";
-  } else if (values.phone.length < 9) {
-    errors.phone = "Minimalna liczba znaków to 9";
-  }
-
-  if (!values.password) {
-    errors.password = "Pole nie może być puste";
-  } else if (values.password.length > 30) {
-    errors.password = "Maksymalna liczba znaków to 30";
-  } else if (values.password.length < 6) {
-    errors.password = "Minimalna liczba znaków to 6";
-  }
-
-  return errors;
-};
-
-const SignupForm = () => {
   const {
     0: passwordOptions,
     1: setPasswordOptions
@@ -178,7 +146,83 @@ const SignupForm = () => {
     });
   };
 
-  const formik = Object(formik__WEBPACK_IMPORTED_MODULE_1__["useFormik"])({
+  const [field, meta] = Object(formik__WEBPACK_IMPORTED_MODULE_1__["useField"])(props);
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("label", {
+    htmlFor: props.id || props.name,
+    className: _form_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.label,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28
+    },
+    __self: undefined
+  }, label), __jsx("div", {
+    className: _form_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.passwordBox,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31
+    },
+    __self: undefined
+  }, __jsx("input", _extends({
+    className: _form_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.textInput,
+    type: passwordOptions.type
+  }, field, props, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32
+    },
+    __self: undefined
+  })), __jsx("button", {
+    className: _form_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.showPassword,
+    onClick: handlePasswordOptionsChange,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 38
+    },
+    __self: undefined
+  }, passwordOptions.text)), meta.touched && meta.error ? __jsx("p", {
+    className: _form_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.error,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 47
+    },
+    __self: undefined
+  }, meta.error) : null);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (TextInput);
+
+/***/ }),
+
+/***/ "./components/Forms/SignupForm.js":
+/*!****************************************!*\
+  !*** ./components/Forms/SignupForm.js ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var formik__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! formik */ "formik");
+/* harmony import */ var formik__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(formik__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _TextInput__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./TextInput */ "./components/Forms/TextInput.js");
+/* harmony import */ var _PasswordInput__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./PasswordInput */ "./components/Forms/PasswordInput.js");
+/* harmony import */ var _form_module_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./form.module.css */ "./components/Forms/form.module.css");
+/* harmony import */ var _form_module_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_form_module_css__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var yup__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! yup */ "yup");
+/* harmony import */ var yup__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(yup__WEBPACK_IMPORTED_MODULE_5__);
+var _jsxFileName = "M:\\ProjektyM\\Next\\AdoptujZwierzaka\\components\\Forms\\SignupForm.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
+
+
+
+const SignupForm = () => {
+  return __jsx(formik__WEBPACK_IMPORTED_MODULE_1__["Formik"], {
     initialValues: {
       firstName: "",
       lastName: "",
@@ -186,193 +230,159 @@ const SignupForm = () => {
       phone: "",
       password: ""
     },
-    validate,
-    onSubmit: values => {
-      alert(JSON.stringify(values, null, 2));
-    }
-  });
-  return __jsx("form", {
-    onSubmit: formik.handleSubmit,
-    className: _form_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.form,
+    validationSchema: yup__WEBPACK_IMPORTED_MODULE_5__["object"]({
+      firstName: yup__WEBPACK_IMPORTED_MODULE_5__["string"]().max(15, "Maksymalna liczba znaków to 15").required("Pole nie może być puste"),
+      lastName: yup__WEBPACK_IMPORTED_MODULE_5__["string"]().max(30, "Maksymalna liczba znaków to 30").required("Pole nie może być puste"),
+      email: yup__WEBPACK_IMPORTED_MODULE_5__["string"]().email("Nieprawidłowy adres e-mail").required("Pole nie może być puste"),
+      phone: yup__WEBPACK_IMPORTED_MODULE_5__["string"]().max(12, "Maksymalna liczba znaków to 12").required("Pole nie może być puste"),
+      password: yup__WEBPACK_IMPORTED_MODULE_5__["string"]().max(30, "Maksymalna liczba znaków to 30").required("Pole nie może być puste")
+    }),
+    onSubmit: async (values, {
+      setSubmitting
+    }) => {
+      console.log("Submitted");
+      setSubmitting(false);
+    },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 83
+      lineNumber: 10
     },
     __self: undefined
-  }, __jsx("label", {
-    htmlFor: "firstName",
-    className: _form_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.label,
+  }, __jsx(formik__WEBPACK_IMPORTED_MODULE_1__["Form"], {
+    className: _form_module_css__WEBPACK_IMPORTED_MODULE_4___default.a.form,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 84
+      lineNumber: 40
     },
     __self: undefined
-  }, "Imi\u0119"), __jsx("input", {
-    id: "firstName",
+  }, __jsx(_TextInput__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    label: "Imi\u0119",
     name: "firstName",
     type: "text",
-    onChange: formik.handleChange,
-    onBlur: formik.handleBlur,
-    value: formik.values.firstName,
-    className: _form_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.textInput,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 87
+      lineNumber: 41
     },
     __self: undefined
-  }), formik.touched.firstName && formik.errors.firstName ? __jsx("p", {
-    className: _form_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.error,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 97
-    },
-    __self: undefined
-  }, formik.errors.firstName) : null, __jsx("label", {
-    htmlFor: "lastName",
-    className: _form_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.label,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 100
-    },
-    __self: undefined
-  }, "Nazwisko"), __jsx("input", {
-    id: "lastName",
+  }), __jsx(_TextInput__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    label: "Nazwisko",
     name: "lastName",
     type: "text",
-    onChange: formik.handleChange,
-    onBlur: formik.handleBlur,
-    value: formik.values.lastName,
-    className: _form_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.textInput,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 103
+      lineNumber: 42
     },
     __self: undefined
-  }), formik.touched.lastName && formik.errors.lastName ? __jsx("p", {
-    className: _form_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.error,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 113
-    },
-    __self: undefined
-  }, formik.errors.lastName) : null, __jsx("label", {
-    htmlFor: "email",
-    className: _form_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.label,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 116
-    },
-    __self: undefined
-  }, "Adres e-mail"), __jsx("input", {
-    id: "email",
+  }), __jsx(_TextInput__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    label: "Adres e-mail",
     name: "email",
     type: "email",
-    onChange: formik.handleChange,
-    onBlur: formik.handleBlur,
-    value: formik.values.email,
-    className: _form_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.textInput,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 119
+      lineNumber: 43
     },
     __self: undefined
-  }), formik.touched.email && formik.errors.email ? __jsx("p", {
-    className: _form_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.error,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 129
-    },
-    __self: undefined
-  }, formik.errors.email) : null, __jsx("label", {
-    htmlFor: "phone",
-    className: _form_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.label,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 132
-    },
-    __self: undefined
-  }, "Telefon"), __jsx("input", {
-    id: "phone",
+  }), __jsx(_TextInput__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    label: "Telefon",
     name: "phone",
     type: "text",
-    onChange: formik.handleChange,
-    onBlur: formik.handleBlur,
-    value: formik.values.phone,
-    className: _form_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.textInput,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 135
+      lineNumber: 44
     },
     __self: undefined
-  }), formik.touched.phone && formik.errors.phone ? __jsx("p", {
-    className: _form_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.error,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 145
-    },
-    __self: undefined
-  }, formik.errors.phone) : null, __jsx("label", {
-    htmlFor: "password",
-    className: _form_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.label,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 148
-    },
-    __self: undefined
-  }, "Has\u0142o"), __jsx("div", {
-    className: _form_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.passwordBox,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 151
-    },
-    __self: undefined
-  }, __jsx("input", {
-    id: "password",
+  }), __jsx(_PasswordInput__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    label: "Has\u0142o",
     name: "password",
-    type: passwordOptions.type,
-    onChange: formik.handleChange,
-    onBlur: formik.handleBlur,
-    value: formik.values.password,
-    className: _form_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.textInput,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 152
+      lineNumber: 45
     },
     __self: undefined
   }), __jsx("button", {
-    className: _form_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.showPassword,
-    onClick: handlePasswordOptionsChange,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 161
-    },
-    __self: undefined
-  }, passwordOptions.text)), formik.touched.password && formik.errors.password ? __jsx("p", {
-    className: _form_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.error,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 170
-    },
-    __self: undefined
-  }, formik.errors.password) : null, __jsx("button", {
     type: "submit",
-    className: `btn main-btn ${_form_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.submitBtn}`,
+    className: `btn main-btn ${_form_module_css__WEBPACK_IMPORTED_MODULE_4___default.a.submitBtn}`,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 173
+      lineNumber: 47
     },
     __self: undefined
   }, "Zarejestruj si\u0119"), __jsx("p", {
-    className: _form_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.info,
+    className: _form_module_css__WEBPACK_IMPORTED_MODULE_4___default.a.info,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 176
+      lineNumber: 50
     },
     __self: undefined
-  }, "Zak\u0142adaj\u0105c konto, akceptujesz regulamin oraz polityk\u0119 prywatno\u015Bci adoptujzwierzaka.pl."));
+  }, "Zak\u0142adaj\u0105c konto, akceptujesz regulamin oraz polityk\u0119 prywatno\u015Bci adoptujzwierzaka.pl.")));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (SignupForm);
+
+/***/ }),
+
+/***/ "./components/Forms/TextInput.js":
+/*!***************************************!*\
+  !*** ./components/Forms/TextInput.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var formik__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! formik */ "formik");
+/* harmony import */ var formik__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(formik__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _form_module_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./form.module.css */ "./components/Forms/form.module.css");
+/* harmony import */ var _form_module_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_form_module_css__WEBPACK_IMPORTED_MODULE_2__);
+var _jsxFileName = "M:\\ProjektyM\\Next\\AdoptujZwierzaka\\components\\Forms\\TextInput.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+
+
+
+
+const TextInput = (_ref) => {
+  let {
+    label
+  } = _ref,
+      props = _objectWithoutProperties(_ref, ["label"]);
+
+  const [field, meta] = Object(formik__WEBPACK_IMPORTED_MODULE_1__["useField"])(props);
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("label", {
+    htmlFor: props.id || props.name,
+    className: _form_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.label,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: undefined
+  }, label), __jsx("input", _extends({
+    className: _form_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.textInput
+  }, field, props, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: undefined
+  })), meta.touched && meta.error ? __jsx("p", {
+    className: _form_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.error,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: undefined
+  }, meta.error) : null);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (TextInput);
 
 /***/ }),
 
@@ -2664,7 +2674,7 @@ const rejestracja = () => {
 
 /***/ }),
 
-/***/ 4:
+/***/ 5:
 /*!************************************!*\
   !*** multi ./pages/rejestracja.js ***!
   \************************************/
@@ -2739,6 +2749,17 @@ module.exports = require("styled-jsx/style");
 /***/ (function(module, exports) {
 
 module.exports = require("url");
+
+/***/ }),
+
+/***/ "yup":
+/*!**********************!*\
+  !*** external "yup" ***!
+  \**********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("yup");
 
 /***/ })
 

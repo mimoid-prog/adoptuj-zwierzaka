@@ -15,10 +15,12 @@
     "formik": "^2.1.4",
     "gsap": "^3.2.4",
     "next": "^9.3.0",
+    "pg": "^7.18.2",
     "react": "^16.13.0",
-    "react-dom": "^16.13.0"
+    "react-dom": "^16.13.0",
+    "yup": "^0.28.3"
   },
   "devDependencies": {
-    "svg-react-loader": "^0.4.6"
+    "babel-plugin-inline-react-svg": "^1.1.1"
   }
 }
