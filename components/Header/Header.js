@@ -11,7 +11,7 @@ const Header = () => {
     const rand = [
       Math.floor(Math.random() * (255 - 0)) + 0,
       Math.floor(Math.random() * (255 - 0)) + 0,
-      Math.floor(Math.random() * (255 - 0)) + 0
+      Math.floor(Math.random() * (255 - 0)) + 0,
     ];
     collar.style.stroke = `rgb(${rand[0]}, ${rand[1]}, ${rand[2]})`;
   };
@@ -29,18 +29,18 @@ const Header = () => {
             </div>
             <div className="content">
               <div className="content-inner">
-                <h1>
+                <h1 className="logo">
                   adoptuj
                   <br />
                   <span>zwierzaka</span>.pl
                 </h1>
                 <p>
-                  Obejrzyj zwierzaki ze schronisk,{" "}
+                  Obejrzyj zwierzaki ze schronisk,
                   <span>wybierz tego, który najbardziej Ci się podoba</span> i
                   podaruj mu nowy dom
                 </p>
                 <div className="see-more-box">
-                  <a href="#main" className="a btn main-btn see-more-btn">
+                  <a href="#intro" className="a btn main-btn see-more-btn">
                     <span>
                       Obejrzyj zwierzaki
                       <img src="/down-arrow.png" alt="Arrow bottom" />
@@ -75,7 +75,6 @@ const Header = () => {
 
           h1 {
             font-size: 30px;
-            font-weight: 900;
             line-height: 1.2;
             text-align: center;
           }

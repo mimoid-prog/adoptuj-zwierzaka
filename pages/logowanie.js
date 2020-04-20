@@ -5,13 +5,25 @@ import Form from "../components/Forms/LoginForm";
 const logowanie = () => {
   return (
     <Layout>
-      <h2>Logowanie</h2>
-      <Form />
+      <h2 className="secondary-title">Logowanie</h2>
+      <div className="content">
+        <Form />
+      </div>
+
       <style jsx>
         {`
+          .content {
+            width: 100%;
+          }
+
           @media (min-width: 1024px) {
             h2 {
               text-align: center;
+            }
+
+            .content {
+              width: 450px;
+              margin: 0 auto;
             }
           }
         `}

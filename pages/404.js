@@ -6,7 +6,7 @@ const Custom404 = () => {
   return (
     <Layout>
       <div className="custom404">
-        <h2>Błąd - nie znaleziono podstrony</h2>
+        <h2 className="secondary-title">Błąd - nie znaleziono podstrony</h2>
         <Girl className="girl-svg" />
       </div>
 

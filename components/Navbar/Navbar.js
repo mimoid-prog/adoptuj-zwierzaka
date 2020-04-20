@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import Hamburger from "./Hamburger";
 import Link from "next/link";
 
-const Navbar = props => {
+const Navbar = (props) => {
   const [isActive, setIsActive] = useState(false);
 
   return (
     <div className={`navbar ${props.notHome ? "not-home" : ""}`}>
       <Link href="/">
         <a className="title">
-          <h2>
+          <h2 className="logo">
             adoptuj<span>zwierzaka</span>.pl
           </h2>
         </a>
@@ -149,6 +149,7 @@ const Navbar = props => {
 
             a {
               text-decoration: none;
+              font-weight: 500;
             }
 
             .signup-btn {
@@ -156,7 +157,7 @@ const Navbar = props => {
               color: white;
               transition: background 0.2s ease;
               border-radius: 99px;
-              padding: 6px 18px;
+              padding: 8px 18px 10px;
               border: none;
               display: inline-block;
             }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Formik, Form } from "formik";
 import TextInput from "./TextInput";
 import PasswordInput from "./PasswordInput";
@@ -7,6 +7,8 @@ import Link from "next/link";
 import * as Yup from "yup";
 
 const LoginForm = () => {
+  const [loading, setLoading] = useState(false);
+
   return (
     <Formik
       initialValues={{
@@ -18,15 +20,14 @@ const LoginForm = () => {
         password: Yup.string().required("Pole nie może być puste")
       })}
       onSubmit={async (values, { setSubmitting }) => {
-        /*const res = await fetch("/api/login", {
+        const res = await fetch("/api/login", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(values)
         });
 
         const data = await res.json();
-        console.log(data);*/
-        console.log("Submitted");
+        console.log(data);
         setSubmitting(false);
       }}
     >
